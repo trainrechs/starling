@@ -4,6 +4,7 @@ import { Boid } from "./simulation/boid";
 import { Vec2 } from "./util/vec2";
 import { Settings } from "./settings";
 import { Renderer } from "./render";
+import { isMobile } from 'pixi.js';
 
 const settings = new Settings();
 const sim = new Simulation(settings, { width: window.innerWidth, height: window.innerHeight });
@@ -33,6 +34,10 @@ function syncBoidCount(target: number) {
 
 for (let i = 0; i < settings.BoidSettings.numBoids; i++) addBoid();
 
+
+if (isMobile.phone) {
+    sim.settings.BoidSettings.wallMargin = 65;
+}
 /* ---------------- GUI ---------------- */
 const gui = new GUI();
 

@@ -14,6 +14,7 @@ export class Renderer {
         this.app.stage.addChild(this.trailOverlay);
     }
 
+
     static async create(width: number, height: number): Promise<Renderer> {
         const app = new PIXI.Application();
         await app.init({
