@@ -6,7 +6,6 @@ import {
     getAlignmentVector,
     getWallAvoidanceVector
 } from "./behaviors";
-import { Vec2 } from "../util/vec2";
 
 export class Simulation {
     boids: Boid[];
