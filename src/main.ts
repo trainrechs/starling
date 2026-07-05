@@ -61,3 +61,8 @@ renderer.app.ticker.add(() => {
     sim.update();
     renderer.render(sim.boids);
 });
+
+window.addEventListener("resize", () => {
+    renderer.app.renderer.resize(window.innerWidth, window.innerHeight);
+    sim.bounds = { width: window.innerWidth, height: window.innerHeight };
+});
