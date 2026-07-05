@@ -48,7 +48,7 @@ class BoidSettings {
         this.cohesionMultiplier = 1;
         this.separationMultiplier = 1.5;
         this.alignmentMultiplier = 1.2;
-        this.wallMargin = 50;
-        this.wallAvoidanceMultiplier = 3.0;
+        this.wallMargin = 125;
+        this.wallAvoidanceMultiplier = 6.0;
     }
 }
